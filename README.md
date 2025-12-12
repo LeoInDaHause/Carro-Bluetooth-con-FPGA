@@ -1,6 +1,6 @@
 # Proyecto Carro a Bluetooth
 
-## Para Digital I - Universidad Nacional de Colombia
+## Materia: Digital I - Universidad Nacional de Colombia
 
 El proyecto se armó para la materia de **Digital I**. La idea era aplicar todo lo que vimos en clase usando una FPGA para hacer un carro que se pudiera controlar con el celular.
 
