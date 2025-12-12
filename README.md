@@ -22,7 +22,7 @@ El proyecto se centra en:
 
 ---
 
-### 📱 La App para el Control
+### La App para el Control
 
 Además de todos los archivos de la lógica del carro, en el repositorio van a encontrar el **APK de la aplicación**.
 
