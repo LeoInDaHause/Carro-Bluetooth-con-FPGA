@@ -1,0 +1,22 @@
+set_io clk 60
+set_io rx 62 # ST Uart TX
+set_io reset 1
+
+
+set_io leds[0] 9 # B91 L3 Yellow led
+set_io leds[1] 11 # B94 cs Red led
+set_io leds[2] 2 # B94 cs Red led
+set_io leds[3] 7 # B94 cs Red led
+set_io leds[4] 38 # B94 cs Red led
+set_io leds[5] 29 # B94 cs Red led
+set_io leds[6] 33 # B94 cs Red led
+set_io leds[7] 19 # B94 cs Red led
+
+set_io IO1 10 #91 L3 Yellow led
+set_io IO2 15# B91 L3 Yellow led
+set_io PWM 16
+
+
+set_io IO3 12 #91 L3 Yellow led
+set_io IO4 17# B91 L3 Yellow led
+set_io PWM2 18
