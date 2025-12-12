@@ -1,4 +1,4 @@
-# 🚗 Proyecto Carro a Bluetooth
+# Proyecto Carro a Bluetooth
 
 ## Para Digital I - Universidad Nacional de Colombia
 
@@ -8,7 +8,7 @@ La meta principal es que este proyecto sirva para que **otras personas puedan en
 
 ---
 
-### ⚙️ Componentes Clave del Sistema
+### Componentes Clave del Sistema
 
 Básicamente, construimos un carro a control remoto.
 
