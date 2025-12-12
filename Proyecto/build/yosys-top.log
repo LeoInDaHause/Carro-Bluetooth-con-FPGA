@@ -91,7 +91,7 @@ Successfully finished Verilog frontend.
 
 2.3. Executing AST frontend in derive mode using pre-parsed AST for module `\top'.
 Generating RTLIL representation for module `\top'.
-Note: Assuming pure combinatorial block at top.v:65.1-71.4 in
+Note: Assuming pure combinatorial block at top.v:61.1-67.4 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
 
@@ -125,17 +125,17 @@ Marked 1 switch rules as full_case in process $proc$/home/josedddd1234/miniconda
 Marked 1 switch rules as full_case in process $proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:477$179 in module SB_DFFSS.
 Marked 1 switch rules as full_case in process $proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:406$176 in module SB_DFFR.
 Marked 1 switch rules as full_case in process $proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:356$173 in module SB_DFFSR.
-Marked 1 switch rules as full_case in process $proc$top.v:143$408 in module top.
-Marked 2 switch rules as full_case in process $proc$top.v:122$405 in module top.
-Marked 4 switch rules as full_case in process $proc$top.v:83$393 in module top.
-Marked 1 switch rules as full_case in process $proc$top.v:74$392 in module top.
-Marked 1 switch rules as full_case in process $proc$top.v:65$390 in module top.
-Marked 1 switch rules as full_case in process $proc$top.v:56$387 in module top.
-Marked 1 switch rules as full_case in process $proc$top.v:45$383 in module top.
+Marked 2 switch rules as full_case in process $proc$top.v:148$408 in module top.
+Marked 2 switch rules as full_case in process $proc$top.v:118$405 in module top.
+Marked 4 switch rules as full_case in process $proc$top.v:79$393 in module top.
+Marked 1 switch rules as full_case in process $proc$top.v:70$392 in module top.
+Marked 1 switch rules as full_case in process $proc$top.v:61$390 in module top.
+Marked 1 switch rules as full_case in process $proc$top.v:52$387 in module top.
+Marked 1 switch rules as full_case in process $proc$top.v:41$383 in module top.
 Removed a total of 0 dead cases.
 
 2.4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
-Removed 9 redundant assignments.
+Removed 15 redundant assignments.
 Promoted 44 assignments to connections.
 
 2.4.4. Executing PROC_INIT pass (extract init attributes).
@@ -179,27 +179,27 @@ Found init rule in `\SB_DFFE.$proc$/home/josedddd1234/miniconda3/envs/digital/bi
   Set init value: \Q = 1'0
 Found init rule in `\SB_DFF.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:0$170'.
   Set init value: \Q = 1'0
-Found init rule in `\top.$proc$top.v:141$423'.
+Found init rule in `\top.$proc$top.v:140$423'.
   Set init value: \duty2 = 8'00000000
-Found init rule in `\top.$proc$top.v:140$422'.
+Found init rule in `\top.$proc$top.v:139$422'.
   Set init value: \duty = 8'00000000
-Found init rule in `\top.$proc$top.v:35$421'.
+Found init rule in `\top.$proc$top.v:34$421'.
   Set init value: \cnt = 20'00000000000000000000
-Found init rule in `\top.$proc$top.v:34$420'.
+Found init rule in `\top.$proc$top.v:33$420'.
   Set init value: \capture = 1'0
-Found init rule in `\top.$proc$top.v:33$419'.
+Found init rule in `\top.$proc$top.v:32$419'.
   Set init value: \c2 = 2'11
-Found init rule in `\top.$proc$top.v:32$418'.
+Found init rule in `\top.$proc$top.v:31$418'.
   Set init value: \delay = 1'0
-Found init rule in `\top.$proc$top.v:31$417'.
+Found init rule in `\top.$proc$top.v:30$417'.
   Set init value: \c = 9'111111111
-Found init rule in `\top.$proc$top.v:30$416'.
+Found init rule in `\top.$proc$top.v:29$416'.
   Set init value: \i = 4'0000
-Found init rule in `\top.$proc$top.v:27$415'.
+Found init rule in `\top.$proc$top.v:26$415'.
   Set init value: \tmp = 9'000000000
-Found init rule in `\top.$proc$top.v:26$414'.
+Found init rule in `\top.$proc$top.v:25$414'.
   Set init value: \done = 1'0
-Found init rule in `\top.$proc$top.v:25$413'.
+Found init rule in `\top.$proc$top.v:24$413'.
   Set init value: \control = 1'0
 
 2.4.5. Executing PROC_ARST pass (detect async resets in processes).
@@ -211,8 +211,8 @@ Found async reset \S in `\SB_DFFES.$proc$/home/josedddd1234/miniconda3/envs/digi
 Found async reset \R in `\SB_DFFER.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:662$192'.
 Found async reset \S in `\SB_DFFS.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:527$182'.
 Found async reset \R in `\SB_DFFR.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:406$176'.
-Found async reset \reset in `\top.$proc$top.v:143$408'.
-Found async reset \reset in `\top.$proc$top.v:74$392'.
+Found async reset \reset in `\top.$proc$top.v:148$408'.
+Found async reset \reset in `\top.$proc$top.v:70$392'.
 
 2.4.6. Executing PROC_ROM pass (convert switches to ROMs).
 Converted 0 switches.
@@ -276,35 +276,35 @@ Creating decoders for process `\SB_DFFE.$proc$/home/josedddd1234/miniconda3/envs
      1/1: $0\Q[0:0]
 Creating decoders for process `\SB_DFF.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:0$170'.
 Creating decoders for process `\SB_DFF.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:271$169'.
-Creating decoders for process `\top.$proc$top.v:141$423'.
-Creating decoders for process `\top.$proc$top.v:140$422'.
-Creating decoders for process `\top.$proc$top.v:35$421'.
-Creating decoders for process `\top.$proc$top.v:34$420'.
-Creating decoders for process `\top.$proc$top.v:33$419'.
-Creating decoders for process `\top.$proc$top.v:32$418'.
-Creating decoders for process `\top.$proc$top.v:31$417'.
-Creating decoders for process `\top.$proc$top.v:30$416'.
-Creating decoders for process `\top.$proc$top.v:27$415'.
-Creating decoders for process `\top.$proc$top.v:26$414'.
-Creating decoders for process `\top.$proc$top.v:25$413'.
-Creating decoders for process `\top.$proc$top.v:240$411'.
-Creating decoders for process `\top.$proc$top.v:236$409'.
-Creating decoders for process `\top.$proc$top.v:143$408'.
+Creating decoders for process `\top.$proc$top.v:140$423'.
+Creating decoders for process `\top.$proc$top.v:139$422'.
+Creating decoders for process `\top.$proc$top.v:34$421'.
+Creating decoders for process `\top.$proc$top.v:33$420'.
+Creating decoders for process `\top.$proc$top.v:32$419'.
+Creating decoders for process `\top.$proc$top.v:31$418'.
+Creating decoders for process `\top.$proc$top.v:30$417'.
+Creating decoders for process `\top.$proc$top.v:29$416'.
+Creating decoders for process `\top.$proc$top.v:26$415'.
+Creating decoders for process `\top.$proc$top.v:25$414'.
+Creating decoders for process `\top.$proc$top.v:24$413'.
+Creating decoders for process `\top.$proc$top.v:251$411'.
+Creating decoders for process `\top.$proc$top.v:248$409'.
+Creating decoders for process `\top.$proc$top.v:148$408'.
      1/6: $0\duty2[7:0]
      2/6: $0\duty[7:0]
      3/6: $0\IO4[0:0]
      4/6: $0\IO3[0:0]
      5/6: $0\IO2[0:0]
      6/6: $0\IO1[0:0]
-Creating decoders for process `\top.$proc$top.v:122$405'.
+Creating decoders for process `\top.$proc$top.v:118$405'.
      1/5: $2\done[0:0]
      2/5: $2\i[3:0]
      3/5: $1\i[3:0]
      4/5: $1\done[0:0]
      5/5: $0\leds[7:0]
-Creating decoders for process `\top.$proc$top.v:115$401'.
+Creating decoders for process `\top.$proc$top.v:111$401'.
      1/1: $0\tmp[8:0]
-Creating decoders for process `\top.$proc$top.v:83$393'.
+Creating decoders for process `\top.$proc$top.v:79$393'.
      1/8: $4\nextstate[1:0]
      2/8: $4\control[0:0]
      3/8: $3\nextstate[1:0]
@@ -313,98 +313,98 @@ Creating decoders for process `\top.$proc$top.v:83$393'.
      6/8: $2\control[0:0]
      7/8: $1\control[0:0]
      8/8: $1\nextstate[1:0]
-Creating decoders for process `\top.$proc$top.v:74$392'.
+Creating decoders for process `\top.$proc$top.v:70$392'.
      1/1: $0\presentstate[1:0]
-Creating decoders for process `\top.$proc$top.v:65$390'.
+Creating decoders for process `\top.$proc$top.v:61$390'.
      1/1: $1\capture[0:0]
-Creating decoders for process `\top.$proc$top.v:56$387'.
+Creating decoders for process `\top.$proc$top.v:52$387'.
      1/1: $1\c2[1:0]
-Creating decoders for process `\top.$proc$top.v:45$383'.
+Creating decoders for process `\top.$proc$top.v:41$383'.
      1/2: $1\c[8:0]
      2/2: $1\delay[0:0]
-Creating decoders for process `\top.$proc$top.v:36$381'.
+Creating decoders for process `\top.$proc$top.v:35$381'.
 
 2.4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
-No latch inferred for signal `\top.\nextstate' from process `\top.$proc$top.v:83$393'.
-Latch inferred for signal `\top.\control' from process `\top.$proc$top.v:83$393': $auto$proc_dlatch.cc:427:proc_dlatch$624
-No latch inferred for signal `\top.\capture' from process `\top.$proc$top.v:65$390'.
-Removing init bit 1'0 for non-memory siginal `\top.\capture` in process `\top.$proc$top.v:65$390`.
+No latch inferred for signal `\top.\nextstate' from process `\top.$proc$top.v:79$393'.
+Latch inferred for signal `\top.\control' from process `\top.$proc$top.v:79$393': $auto$proc_dlatch.cc:427:proc_dlatch$642
+No latch inferred for signal `\top.\capture' from process `\top.$proc$top.v:61$390'.
+Removing init bit 1'0 for non-memory siginal `\top.\capture` in process `\top.$proc$top.v:61$390`.
 
 2.4.9. Executing PROC_DFF pass (convert process syncs to FFs).
 Creating register for signal `\SB_DFFNES.\Q' using process `\SB_DFFNES.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:1414$241'.
-  created $adff cell `$procdff$625' with negative edge clock and positive level reset.
+  created $adff cell `$procdff$643' with negative edge clock and positive level reset.
 Creating register for signal `\SB_DFFNESS.\Q' using process `\SB_DFFNESS.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:1353$234'.
-  created $dff cell `$procdff$626' with negative edge clock.
+  created $dff cell `$procdff$644' with negative edge clock.
 Creating register for signal `\SB_DFFNER.\Q' using process `\SB_DFFNER.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:1273$230'.
-  created $adff cell `$procdff$627' with negative edge clock and positive level reset.
+  created $adff cell `$procdff$645' with negative edge clock and positive level reset.
 Creating register for signal `\SB_DFFNESR.\Q' using process `\SB_DFFNESR.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:1212$223'.
-  created $dff cell `$procdff$628' with negative edge clock.
+  created $dff cell `$procdff$646' with negative edge clock.
 Creating register for signal `\SB_DFFNS.\Q' using process `\SB_DFFNS.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:1138$220'.
-  created $adff cell `$procdff$629' with negative edge clock and positive level reset.
+  created $adff cell `$procdff$647' with negative edge clock and positive level reset.
 Creating register for signal `\SB_DFFNSS.\Q' using process `\SB_DFFNSS.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:1088$217'.
-  created $dff cell `$procdff$630' with negative edge clock.
+  created $dff cell `$procdff$648' with negative edge clock.
 Creating register for signal `\SB_DFFNR.\Q' using process `\SB_DFFNR.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:1017$214'.
-  created $adff cell `$procdff$631' with negative edge clock and positive level reset.
+  created $adff cell `$procdff$649' with negative edge clock and positive level reset.
 Creating register for signal `\SB_DFFNSR.\Q' using process `\SB_DFFNSR.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:967$211'.
-  created $dff cell `$procdff$632' with negative edge clock.
+  created $dff cell `$procdff$650' with negative edge clock.
 Creating register for signal `\SB_DFFNE.\Q' using process `\SB_DFFNE.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:922$209'.
-  created $dff cell `$procdff$633' with negative edge clock.
+  created $dff cell `$procdff$651' with negative edge clock.
 Creating register for signal `\SB_DFFN.\Q' using process `\SB_DFFN.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:882$207'.
-  created $dff cell `$procdff$634' with negative edge clock.
+  created $dff cell `$procdff$652' with negative edge clock.
 Creating register for signal `\SB_DFFES.\Q' using process `\SB_DFFES.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:803$203'.
-  created $adff cell `$procdff$635' with positive edge clock and positive level reset.
+  created $adff cell `$procdff$653' with positive edge clock and positive level reset.
 Creating register for signal `\SB_DFFESS.\Q' using process `\SB_DFFESS.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:742$196'.
-  created $dff cell `$procdff$636' with positive edge clock.
-Creating register for signal `\SB_DFFER.\Q' using process `\SB_DFFER.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:662$192'.
-  created $adff cell `$procdff$637' with positive edge clock and positive level reset.
-Creating register for signal `\SB_DFFESR.\Q' using process `\SB_DFFESR.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:601$185'.
-  created $dff cell `$procdff$638' with positive edge clock.
-Creating register for signal `\SB_DFFS.\Q' using process `\SB_DFFS.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:527$182'.
-  created $adff cell `$procdff$639' with positive edge clock and positive level reset.
-Creating register for signal `\SB_DFFSS.\Q' using process `\SB_DFFSS.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:477$179'.
-  created $dff cell `$procdff$640' with positive edge clock.
-Creating register for signal `\SB_DFFR.\Q' using process `\SB_DFFR.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:406$176'.
-  created $adff cell `$procdff$641' with positive edge clock and positive level reset.
-Creating register for signal `\SB_DFFSR.\Q' using process `\SB_DFFSR.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:356$173'.
-  created $dff cell `$procdff$642' with positive edge clock.
-Creating register for signal `\SB_DFFE.\Q' using process `\SB_DFFE.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:311$171'.
-  created $dff cell `$procdff$643' with positive edge clock.
-Creating register for signal `\SB_DFF.\Q' using process `\SB_DFF.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:271$169'.
-  created $dff cell `$procdff$644' with positive edge clock.
-Creating register for signal `\top.\PWM2' using process `\top.$proc$top.v:240$411'.
-  created $dff cell `$procdff$645' with positive edge clock.
-Creating register for signal `\top.\PWM' using process `\top.$proc$top.v:236$409'.
-  created $dff cell `$procdff$646' with positive edge clock.
-Creating register for signal `\top.\IO1' using process `\top.$proc$top.v:143$408'.
-  created $adff cell `$procdff$647' with positive edge clock and positive level reset.
-Creating register for signal `\top.\IO2' using process `\top.$proc$top.v:143$408'.
-  created $adff cell `$procdff$648' with positive edge clock and positive level reset.
-Creating register for signal `\top.\IO3' using process `\top.$proc$top.v:143$408'.
-  created $adff cell `$procdff$649' with positive edge clock and positive level reset.
-Creating register for signal `\top.\IO4' using process `\top.$proc$top.v:143$408'.
-  created $adff cell `$procdff$650' with positive edge clock and positive level reset.
-Creating register for signal `\top.\duty' using process `\top.$proc$top.v:143$408'.
-  created $adff cell `$procdff$651' with positive edge clock and positive level reset.
-Creating register for signal `\top.\duty2' using process `\top.$proc$top.v:143$408'.
-  created $adff cell `$procdff$652' with positive edge clock and positive level reset.
-Creating register for signal `\top.\leds' using process `\top.$proc$top.v:122$405'.
-  created $dff cell `$procdff$653' with positive edge clock.
-Creating register for signal `\top.\done' using process `\top.$proc$top.v:122$405'.
   created $dff cell `$procdff$654' with positive edge clock.
-Creating register for signal `\top.\i' using process `\top.$proc$top.v:122$405'.
-  created $dff cell `$procdff$655' with positive edge clock.
-Creating register for signal `\top.\tmp' using process `\top.$proc$top.v:115$401'.
+Creating register for signal `\SB_DFFER.\Q' using process `\SB_DFFER.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:662$192'.
+  created $adff cell `$procdff$655' with positive edge clock and positive level reset.
+Creating register for signal `\SB_DFFESR.\Q' using process `\SB_DFFESR.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:601$185'.
   created $dff cell `$procdff$656' with positive edge clock.
-Creating register for signal `\top.\presentstate' using process `\top.$proc$top.v:74$392'.
+Creating register for signal `\SB_DFFS.\Q' using process `\SB_DFFS.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:527$182'.
   created $adff cell `$procdff$657' with positive edge clock and positive level reset.
-Creating register for signal `\top.\c2' using process `\top.$proc$top.v:56$387'.
+Creating register for signal `\SB_DFFSS.\Q' using process `\SB_DFFSS.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:477$179'.
   created $dff cell `$procdff$658' with positive edge clock.
-Creating register for signal `\top.\c' using process `\top.$proc$top.v:45$383'.
-  created $dff cell `$procdff$659' with positive edge clock.
-Creating register for signal `\top.\delay' using process `\top.$proc$top.v:45$383'.
+Creating register for signal `\SB_DFFR.\Q' using process `\SB_DFFR.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:406$176'.
+  created $adff cell `$procdff$659' with positive edge clock and positive level reset.
+Creating register for signal `\SB_DFFSR.\Q' using process `\SB_DFFSR.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:356$173'.
   created $dff cell `$procdff$660' with positive edge clock.
-Creating register for signal `\top.\cnt' using process `\top.$proc$top.v:36$381'.
+Creating register for signal `\SB_DFFE.\Q' using process `\SB_DFFE.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:311$171'.
   created $dff cell `$procdff$661' with positive edge clock.
+Creating register for signal `\SB_DFF.\Q' using process `\SB_DFF.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:271$169'.
+  created $dff cell `$procdff$662' with positive edge clock.
+Creating register for signal `\top.\PWM2' using process `\top.$proc$top.v:251$411'.
+  created $dff cell `$procdff$663' with positive edge clock.
+Creating register for signal `\top.\PWM' using process `\top.$proc$top.v:248$409'.
+  created $dff cell `$procdff$664' with positive edge clock.
+Creating register for signal `\top.\IO1' using process `\top.$proc$top.v:148$408'.
+  created $adff cell `$procdff$665' with positive edge clock and positive level reset.
+Creating register for signal `\top.\IO2' using process `\top.$proc$top.v:148$408'.
+  created $adff cell `$procdff$666' with positive edge clock and positive level reset.
+Creating register for signal `\top.\IO3' using process `\top.$proc$top.v:148$408'.
+  created $adff cell `$procdff$667' with positive edge clock and positive level reset.
+Creating register for signal `\top.\IO4' using process `\top.$proc$top.v:148$408'.
+  created $adff cell `$procdff$668' with positive edge clock and positive level reset.
+Creating register for signal `\top.\duty' using process `\top.$proc$top.v:148$408'.
+  created $adff cell `$procdff$669' with positive edge clock and positive level reset.
+Creating register for signal `\top.\duty2' using process `\top.$proc$top.v:148$408'.
+  created $adff cell `$procdff$670' with positive edge clock and positive level reset.
+Creating register for signal `\top.\leds' using process `\top.$proc$top.v:118$405'.
+  created $dff cell `$procdff$671' with positive edge clock.
+Creating register for signal `\top.\done' using process `\top.$proc$top.v:118$405'.
+  created $dff cell `$procdff$672' with positive edge clock.
+Creating register for signal `\top.\i' using process `\top.$proc$top.v:118$405'.
+  created $dff cell `$procdff$673' with positive edge clock.
+Creating register for signal `\top.\tmp' using process `\top.$proc$top.v:111$401'.
+  created $dff cell `$procdff$674' with positive edge clock.
+Creating register for signal `\top.\presentstate' using process `\top.$proc$top.v:70$392'.
+  created $adff cell `$procdff$675' with positive edge clock and positive level reset.
+Creating register for signal `\top.\c2' using process `\top.$proc$top.v:52$387'.
+  created $dff cell `$procdff$676' with positive edge clock.
+Creating register for signal `\top.\c' using process `\top.$proc$top.v:41$383'.
+  created $dff cell `$procdff$677' with positive edge clock.
+Creating register for signal `\top.\delay' using process `\top.$proc$top.v:41$383'.
+  created $dff cell `$procdff$678' with positive edge clock.
+Creating register for signal `\top.\cnt' using process `\top.$proc$top.v:35$381'.
+  created $dff cell `$procdff$679' with positive edge clock.
 
 2.4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
 
@@ -463,35 +463,35 @@ Found and cleaned up 1 empty switch in `\SB_DFFE.$proc$/home/josedddd1234/minico
 Removing empty process `SB_DFFE.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:311$171'.
 Removing empty process `SB_DFF.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:0$170'.
 Removing empty process `SB_DFF.$proc$/home/josedddd1234/miniconda3/envs/digital/bin/../share/yosys/ice40/cells_sim.v:271$169'.
-Removing empty process `top.$proc$top.v:141$423'.
-Removing empty process `top.$proc$top.v:140$422'.
-Removing empty process `top.$proc$top.v:35$421'.
-Removing empty process `top.$proc$top.v:34$420'.
-Removing empty process `top.$proc$top.v:33$419'.
-Removing empty process `top.$proc$top.v:32$418'.
-Removing empty process `top.$proc$top.v:31$417'.
-Removing empty process `top.$proc$top.v:30$416'.
-Removing empty process `top.$proc$top.v:27$415'.
-Removing empty process `top.$proc$top.v:26$414'.
-Removing empty process `top.$proc$top.v:25$413'.
-Removing empty process `top.$proc$top.v:240$411'.
-Removing empty process `top.$proc$top.v:236$409'.
-Found and cleaned up 1 empty switch in `\top.$proc$top.v:143$408'.
-Removing empty process `top.$proc$top.v:143$408'.
-Found and cleaned up 2 empty switches in `\top.$proc$top.v:122$405'.
-Removing empty process `top.$proc$top.v:122$405'.
-Found and cleaned up 1 empty switch in `\top.$proc$top.v:115$401'.
-Removing empty process `top.$proc$top.v:115$401'.
-Found and cleaned up 4 empty switches in `\top.$proc$top.v:83$393'.
-Removing empty process `top.$proc$top.v:83$393'.
-Removing empty process `top.$proc$top.v:74$392'.
-Found and cleaned up 1 empty switch in `\top.$proc$top.v:65$390'.
-Removing empty process `top.$proc$top.v:65$390'.
-Found and cleaned up 1 empty switch in `\top.$proc$top.v:56$387'.
-Removing empty process `top.$proc$top.v:56$387'.
-Found and cleaned up 1 empty switch in `\top.$proc$top.v:45$383'.
-Removing empty process `top.$proc$top.v:45$383'.
-Removing empty process `top.$proc$top.v:36$381'.
+Removing empty process `top.$proc$top.v:140$423'.
+Removing empty process `top.$proc$top.v:139$422'.
+Removing empty process `top.$proc$top.v:34$421'.
+Removing empty process `top.$proc$top.v:33$420'.
+Removing empty process `top.$proc$top.v:32$419'.
+Removing empty process `top.$proc$top.v:31$418'.
+Removing empty process `top.$proc$top.v:30$417'.
+Removing empty process `top.$proc$top.v:29$416'.
+Removing empty process `top.$proc$top.v:26$415'.
+Removing empty process `top.$proc$top.v:25$414'.
+Removing empty process `top.$proc$top.v:24$413'.
+Removing empty process `top.$proc$top.v:251$411'.
+Removing empty process `top.$proc$top.v:248$409'.
+Found and cleaned up 1 empty switch in `\top.$proc$top.v:148$408'.
+Removing empty process `top.$proc$top.v:148$408'.
+Found and cleaned up 2 empty switches in `\top.$proc$top.v:118$405'.
+Removing empty process `top.$proc$top.v:118$405'.
+Found and cleaned up 1 empty switch in `\top.$proc$top.v:111$401'.
+Removing empty process `top.$proc$top.v:111$401'.
+Found and cleaned up 4 empty switches in `\top.$proc$top.v:79$393'.
+Removing empty process `top.$proc$top.v:79$393'.
+Removing empty process `top.$proc$top.v:70$392'.
+Found and cleaned up 1 empty switch in `\top.$proc$top.v:61$390'.
+Removing empty process `top.$proc$top.v:61$390'.
+Found and cleaned up 1 empty switch in `\top.$proc$top.v:52$387'.
+Removing empty process `top.$proc$top.v:52$387'.
+Found and cleaned up 1 empty switch in `\top.$proc$top.v:41$383'.
+Removing empty process `top.$proc$top.v:41$383'.
+Removing empty process `top.$proc$top.v:35$381'.
 Cleaned up 29 empty switches.
 
 2.4.12. Executing OPT_EXPR pass (perform const folding).
@@ -521,42 +521,42 @@ Optimizing module top.
 
 2.11.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\top'.
-Removed a total of 42 cells.
+Removed a total of 52 cells.
 
 2.11.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
 Running muxtree optimizer on module \top..
   Creating internal representation of mux trees.
   Evaluating internal representation of mux trees.
   Analyzing evaluation results.
-    dead port 2/2 on $mux $procmux$520.
-    dead port 2/2 on $mux $procmux$526.
-    dead port 2/2 on $mux $procmux$546.
-    dead port 1/2 on $mux $procmux$560.
-    dead port 2/2 on $mux $procmux$562.
-    dead port 2/2 on $mux $procmux$579.
+    dead port 2/2 on $mux $procmux$538.
+    dead port 2/2 on $mux $procmux$544.
+    dead port 2/2 on $mux $procmux$564.
+    dead port 1/2 on $mux $procmux$578.
+    dead port 2/2 on $mux $procmux$580.
+    dead port 2/2 on $mux $procmux$597.
 Removed 6 multiplexer ports.
 
 2.11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
   Optimizing cells in module \top.
-    New ctrl vector for $pmux cell $procmux$484: { $auto$opt_reduce.cc:134:opt_pmux$665 $auto$opt_reduce.cc:134:opt_pmux$663 }
-    New ctrl vector for $pmux cell $procmux$492: { $auto$opt_reduce.cc:134:opt_pmux$669 $auto$opt_reduce.cc:134:opt_pmux$667 }
-    New ctrl vector for $pmux cell $procmux$500: { $procmux$473_CMP $auto$opt_reduce.cc:134:opt_pmux$671 }
-    New ctrl vector for $pmux cell $procmux$508: { $auto$opt_reduce.cc:134:opt_pmux$675 $auto$opt_reduce.cc:134:opt_pmux$673 }
-    New ctrl vector for $pmux cell $procmux$476: { $procmux$474_CMP $auto$opt_reduce.cc:134:opt_pmux$677 }
-    New ctrl vector for $pmux cell $procmux$589: $procmux$547_CMP
-    New ctrl vector for $pmux cell $procmux$468: { $procmux$474_CMP $procmux$471_CMP $auto$opt_reduce.cc:134:opt_pmux$681 $auto$opt_reduce.cc:134:opt_pmux$679 }
+    New ctrl vector for $pmux cell $procmux$491: { $auto$opt_reduce.cc:134:opt_pmux$683 $auto$opt_reduce.cc:134:opt_pmux$681 }
+    New ctrl vector for $pmux cell $procmux$502: { $auto$opt_reduce.cc:134:opt_pmux$687 $auto$opt_reduce.cc:134:opt_pmux$685 }
+    New ctrl vector for $pmux cell $procmux$513: { $auto$opt_reduce.cc:134:opt_pmux$691 $auto$opt_reduce.cc:134:opt_pmux$689 }
+    New ctrl vector for $pmux cell $procmux$524: { $auto$opt_reduce.cc:134:opt_pmux$695 $auto$opt_reduce.cc:134:opt_pmux$693 }
+    New ctrl vector for $pmux cell $procmux$469: { $procmux$477_CMP $auto$opt_reduce.cc:134:opt_pmux$699 $auto$opt_reduce.cc:134:opt_pmux$697 }
+    New ctrl vector for $pmux cell $procmux$607: $procmux$565_CMP
+    New ctrl vector for $pmux cell $procmux$480: { $procmux$477_CMP $auto$opt_reduce.cc:134:opt_pmux$703 $auto$opt_reduce.cc:134:opt_pmux$701 }
   Optimizing cells in module \top.
 Performed a total of 7 changes.
 
 2.11.5. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\top'.
-Removed a total of 0 cells.
+Removed a total of 2 cells.
 
 2.11.6. Executing OPT_DFF pass (perform DFF optimizations).
 
 2.11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
-Removed 0 unused cells and 48 unused wires.
+Removed 0 unused cells and 60 unused wires.
 
 2.11.8. Executing OPT_EXPR pass (perform const folding).
 Optimizing module top.
@@ -640,20 +640,20 @@ Finding identical cells in module `\top'.
 Removed a total of 0 cells.
 
 2.13.6. Executing OPT_DFF pass (perform DFF optimizations).
-Adding EN signal on $procdff$660 ($dff) from module top (D = $not$top.v:51$386_Y, Q = \delay).
-Adding SRST signal on $procdff$659 ($dff) from module top (D = $add$top.v:48$385_Y [8:0], Q = \c, rval = 9'000000000).
-Adding SRST signal on $procdff$658 ($dff) from module top (D = $add$top.v:61$389_Y [1:0], Q = \c2, rval = 2'00).
-Adding EN signal on $procdff$656 ($dff) from module top (D = { \rx \tmp [8:1] }, Q = \tmp).
-Adding EN signal on $procdff$655 ($dff) from module top (D = $2\i[3:0], Q = \i).
-Adding SRST signal on $auto$ff.cc:266:slice$686 ($dffe) from module top (D = $add$top.v:131$407_Y [3:0], Q = \i, rval = 4'0000).
-Adding SRST signal on $procdff$654 ($dff) from module top (D = $2\done[0:0], Q = \done, rval = 1'0).
-Adding EN signal on $procdff$653 ($dff) from module top (D = \tmp [8:1], Q = \leds).
-Adding EN signal on $procdff$652 ($adff) from module top (D = $0\duty2[7:0], Q = \duty2).
-Adding EN signal on $procdff$651 ($adff) from module top (D = $0\duty[7:0], Q = \duty).
-Adding EN signal on $procdff$650 ($adff) from module top (D = $0\IO4[0:0], Q = \IO4).
-Adding EN signal on $procdff$649 ($adff) from module top (D = $0\IO3[0:0], Q = \IO3).
-Adding EN signal on $procdff$648 ($adff) from module top (D = $0\IO2[0:0], Q = \IO2).
-Adding EN signal on $procdff$647 ($adff) from module top (D = $0\IO1[0:0], Q = \IO1).
+Adding EN signal on $procdff$678 ($dff) from module top (D = $not$top.v:47$386_Y, Q = \delay).
+Adding SRST signal on $procdff$677 ($dff) from module top (D = $add$top.v:44$385_Y [8:0], Q = \c, rval = 9'000000000).
+Adding SRST signal on $procdff$676 ($dff) from module top (D = $add$top.v:57$389_Y [1:0], Q = \c2, rval = 2'00).
+Adding EN signal on $procdff$674 ($dff) from module top (D = { \rx \tmp [8:1] }, Q = \tmp).
+Adding EN signal on $procdff$673 ($dff) from module top (D = $2\i[3:0], Q = \i).
+Adding SRST signal on $auto$ff.cc:266:slice$708 ($dffe) from module top (D = $add$top.v:127$407_Y [3:0], Q = \i, rval = 4'0000).
+Adding SRST signal on $procdff$672 ($dff) from module top (D = $2\done[0:0], Q = \done, rval = 1'0).
+Adding EN signal on $procdff$671 ($dff) from module top (D = \tmp [8:1], Q = \leds).
+Adding EN signal on $procdff$670 ($adff) from module top (D = $0\duty2[7:0], Q = \duty2).
+Adding EN signal on $procdff$669 ($adff) from module top (D = $0\duty[7:0], Q = \duty).
+Adding EN signal on $procdff$668 ($adff) from module top (D = $0\IO4[0:0], Q = \IO4).
+Adding EN signal on $procdff$667 ($adff) from module top (D = $0\IO3[0:0], Q = \IO3).
+Adding EN signal on $procdff$666 ($adff) from module top (D = $0\IO2[0:0], Q = \IO2).
+Adding EN signal on $procdff$665 ($adff) from module top (D = $0\IO1[0:0], Q = \IO1).
 
 2.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
@@ -677,39 +677,68 @@ Performed a total of 0 changes.
 
 2.13.12. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\top'.
-Removed a total of 0 cells.
+Removed a total of 3 cells.
 
 2.13.13. Executing OPT_DFF pass (perform DFF optimizations).
 
 2.13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
+Removed 0 unused cells and 2 unused wires.
 
 2.13.15. Executing OPT_EXPR pass (perform const folding).
 Optimizing module top.
 
-2.13.16. Finished OPT passes. (There is nothing left to do.)
+2.13.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.13.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+2.13.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.13.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.13.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.13.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.13.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.13.23. Finished OPT passes. (There is nothing left to do.)
 
 2.14. Executing WREDUCE pass (reducing word size of cells).
-Removed top 31 bits (of 32) from port B of cell top.$add$top.v:36$382 ($add).
-Removed top 12 bits (of 32) from port Y of cell top.$add$top.v:36$382 ($add).
-Removed top 31 bits (of 32) from port B of cell top.$add$top.v:48$385 ($add).
-Removed top 23 bits (of 32) from port Y of cell top.$add$top.v:48$385 ($add).
-Removed top 31 bits (of 32) from port B of cell top.$gt$top.v:58$388 ($gt).
-Removed top 31 bits (of 32) from port B of cell top.$add$top.v:61$389 ($add).
-Removed top 30 bits (of 32) from port Y of cell top.$add$top.v:61$389 ($add).
-Removed top 1 bits (of 2) from port B of cell top.$eq$top.v:67$391 ($eq).
-Removed top 28 bits (of 32) from port B of cell top.$ge$top.v:125$406 ($ge).
-Removed top 31 bits (of 32) from port B of cell top.$add$top.v:131$407 ($add).
-Removed top 28 bits (of 32) from port Y of cell top.$add$top.v:131$407 ($add).
-Removed top 1 bits (of 8) from port B of cell top.$procmux$469_CMP0 ($eq).
+Removed top 31 bits (of 32) from port B of cell top.$add$top.v:35$382 ($add).
+Removed top 12 bits (of 32) from port Y of cell top.$add$top.v:35$382 ($add).
+Removed top 23 bits (of 32) from port B of cell top.$lt$top.v:43$384 ($lt).
+Removed top 31 bits (of 32) from port B of cell top.$add$top.v:44$385 ($add).
+Removed top 23 bits (of 32) from port Y of cell top.$add$top.v:44$385 ($add).
+Removed top 31 bits (of 32) from port B of cell top.$gt$top.v:54$388 ($gt).
+Removed top 31 bits (of 32) from port B of cell top.$add$top.v:57$389 ($add).
+Removed top 30 bits (of 32) from port Y of cell top.$add$top.v:57$389 ($add).
+Removed top 1 bits (of 2) from port B of cell top.$eq$top.v:63$391 ($eq).
+Removed top 28 bits (of 32) from port B of cell top.$ge$top.v:121$406 ($ge).
+Removed top 31 bits (of 32) from port B of cell top.$add$top.v:127$407 ($add).
+Removed top 28 bits (of 32) from port Y of cell top.$add$top.v:127$407 ($add).
 Removed top 1 bits (of 8) from port B of cell top.$procmux$470_CMP0 ($eq).
 Removed top 1 bits (of 8) from port B of cell top.$procmux$471_CMP0 ($eq).
 Removed top 1 bits (of 8) from port B of cell top.$procmux$472_CMP0 ($eq).
 Removed top 1 bits (of 8) from port B of cell top.$procmux$473_CMP0 ($eq).
 Removed top 1 bits (of 8) from port B of cell top.$procmux$474_CMP0 ($eq).
 Removed top 1 bits (of 8) from port B of cell top.$procmux$475_CMP0 ($eq).
-Removed top 28 bits (of 32) from wire top.$add$top.v:131$407_Y.
-Removed top 23 bits (of 32) from wire top.$add$top.v:48$385_Y.
+Removed top 1 bits (of 8) from port B of cell top.$procmux$476_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell top.$procmux$477_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell top.$procmux$478_CMP0 ($eq).
+Removed top 28 bits (of 32) from wire top.$add$top.v:127$407_Y.
+Removed top 23 bits (of 32) from wire top.$add$top.v:44$385_Y.
 
 2.15. Executing PEEPOPT pass (run peephole optimizers).
 
@@ -740,24 +769,24 @@ Removed 0 unused cells and 6 unused wires.
 
 2.21. Executing ALUMACC pass (create $alu and $macc cells).
 Extracting $alu and $macc cells in module top:
-  creating $macc model for $add$top.v:131$407 ($add).
-  creating $macc model for $add$top.v:36$382 ($add).
-  creating $macc model for $add$top.v:48$385 ($add).
-  creating $macc model for $add$top.v:61$389 ($add).
-  creating $alu model for $macc $add$top.v:61$389.
-  creating $alu model for $macc $add$top.v:48$385.
-  creating $alu model for $macc $add$top.v:36$382.
-  creating $alu model for $macc $add$top.v:131$407.
-  creating $alu model for $lt$top.v:237$410 ($lt): new $alu
-  creating $alu model for $lt$top.v:241$412 ($lt): new $alu
-  creating $alu model for $lt$top.v:47$384 ($lt): new $alu
-  creating $alu cell for $lt$top.v:47$384: $auto$alumacc.cc:485:replace_alu$720
-  creating $alu cell for $lt$top.v:241$412: $auto$alumacc.cc:485:replace_alu$731
-  creating $alu cell for $lt$top.v:237$410: $auto$alumacc.cc:485:replace_alu$736
-  creating $alu cell for $add$top.v:131$407: $auto$alumacc.cc:485:replace_alu$741
-  creating $alu cell for $add$top.v:36$382: $auto$alumacc.cc:485:replace_alu$744
-  creating $alu cell for $add$top.v:48$385: $auto$alumacc.cc:485:replace_alu$747
-  creating $alu cell for $add$top.v:61$389: $auto$alumacc.cc:485:replace_alu$750
+  creating $macc model for $add$top.v:127$407 ($add).
+  creating $macc model for $add$top.v:35$382 ($add).
+  creating $macc model for $add$top.v:44$385 ($add).
+  creating $macc model for $add$top.v:57$389 ($add).
+  creating $alu model for $macc $add$top.v:57$389.
+  creating $alu model for $macc $add$top.v:44$385.
+  creating $alu model for $macc $add$top.v:35$382.
+  creating $alu model for $macc $add$top.v:127$407.
+  creating $alu model for $lt$top.v:249$410 ($lt): new $alu
+  creating $alu model for $lt$top.v:252$412 ($lt): new $alu
+  creating $alu model for $lt$top.v:43$384 ($lt): new $alu
+  creating $alu cell for $lt$top.v:43$384: $auto$alumacc.cc:485:replace_alu$742
+  creating $alu cell for $lt$top.v:252$412: $auto$alumacc.cc:485:replace_alu$753
+  creating $alu cell for $lt$top.v:249$410: $auto$alumacc.cc:485:replace_alu$758
+  creating $alu cell for $add$top.v:127$407: $auto$alumacc.cc:485:replace_alu$763
+  creating $alu cell for $add$top.v:35$382: $auto$alumacc.cc:485:replace_alu$766
+  creating $alu cell for $add$top.v:44$385: $auto$alumacc.cc:485:replace_alu$769
+  creating $alu cell for $add$top.v:57$389: $auto$alumacc.cc:485:replace_alu$772
   created 7 $alu and 0 $macc cells.
 
 2.22. Executing OPT pass (performing simple optimizations).
@@ -882,7 +911,7 @@ Removed a total of 0 cells.
 
 2.28.4. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
-Removed 0 unused cells and 5 unused wires.
+Removed 0 unused cells and 4 unused wires.
 
 2.28.5. Finished fast OPT passes.
 
@@ -906,29 +935,29 @@ Removed 0 multiplexer ports.
 
 2.30.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
   Optimizing cells in module \top.
-    Consolidated identical input bits for $pmux cell $procmux$468:
-      Old ports: A=8'00000000, B=24'100110110011110001011010, Y=$0\duty2[7:0]
-      New ports: A=5'00000, B=15'010110110011010, Y={ $0\duty2[7:0] [6] $0\duty2[7:0] [3:0] }
-      New connections: { $0\duty2[7:0] [7] $0\duty2[7:0] [5:4] } = { $0\duty2[7:0] [0] $0\duty2[7:0] [2] $0\duty2[7:0] [3] }
-    Consolidated identical input bits for $mux cell $procmux$476:
-      Old ports: A=8'00000000, B=8'01011010, Y=$0\duty[7:0]
-      New ports: A=1'0, B=1'1, Y=$0\duty[7:0] [1]
-      New connections: { $0\duty[7:0] [7:2] $0\duty[7:0] [0] } = { 1'0 $0\duty[7:0] [1] 1'0 $0\duty[7:0] [1] $0\duty[7:0] [1] 2'00 }
-    Consolidated identical input bits for $mux cell $procmux$544:
+    Consolidated identical input bits for $pmux cell $procmux$469:
+      Old ports: A=8'00000000, B=16'1001101101011010, Y=$0\duty2[7:0]
+      New ports: A=3'000, B=6'011110, Y={ $0\duty2[7:0] [6] $0\duty2[7:0] [1:0] }
+      New connections: { $0\duty2[7:0] [7] $0\duty2[7:0] [5:2] } = { $0\duty2[7:0] [0] 1'0 $0\duty2[7:0] [1] $0\duty2[7:0] [1] 1'0 }
+    Consolidated identical input bits for $pmux cell $procmux$480:
+      Old ports: A=8'00000000, B=16'0101101010011011, Y=$0\duty[7:0]
+      New ports: A=3'000, B=6'110011, Y={ $0\duty[7:0] [6] $0\duty[7:0] [1:0] }
+      New connections: { $0\duty[7:0] [7] $0\duty[7:0] [5:2] } = { $0\duty[7:0] [0] 1'0 $0\duty[7:0] [1] $0\duty[7:0] [1] 1'0 }
+    Consolidated identical input bits for $mux cell $procmux$562:
       Old ports: A=2'10, B=2'00, Y=$4\nextstate[1:0]
       New ports: A=1'1, B=1'0, Y=$4\nextstate[1:0] [1]
       New connections: $4\nextstate[1:0] [0] = 1'0
-    Consolidated identical input bits for $mux cell $procmux$557:
+    Consolidated identical input bits for $mux cell $procmux$575:
       Old ports: A=2'00, B=2'10, Y=$3\nextstate[1:0]
       New ports: A=1'0, B=1'1, Y=$3\nextstate[1:0] [1]
       New connections: $3\nextstate[1:0] [0] = 1'0
   Optimizing cells in module \top.
-    Consolidated identical input bits for $mux cell $procmux$577:
+    Consolidated identical input bits for $mux cell $procmux$595:
       Old ports: A=$3\nextstate[1:0], B=2'00, Y=$2\nextstate[1:0]
       New ports: A=$3\nextstate[1:0] [1], B=1'0, Y=$2\nextstate[1:0] [1]
       New connections: $2\nextstate[1:0] [0] = 1'0
   Optimizing cells in module \top.
-    Consolidated identical input bits for $pmux cell $procmux$593:
+    Consolidated identical input bits for $pmux cell $procmux$611:
       Old ports: A=2'00, B={ $2\nextstate[1:0] $4\nextstate[1:0] }, Y=\nextstate
       New ports: A=1'0, B={ $2\nextstate[1:0] [1] $4\nextstate[1:0] [1] }, Y=\nextstate [1]
       New connections: \nextstate [0] = 1'0
@@ -966,11 +995,11 @@ Finding identical cells in module `\top'.
 Removed a total of 0 cells.
 
 2.30.13. Executing OPT_DFF pass (perform DFF optimizations).
-Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$695 ($adffe) from module top.
-Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$695 ($adffe) from module top.
-Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$695 ($adffe) from module top.
-Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$695 ($adffe) from module top.
-Setting constant 0-bit at position 0 on $procdff$657 ($adff) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$714 ($adffe) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$714 ($adffe) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$717 ($adffe) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$717 ($adffe) from module top.
+Setting constant 0-bit at position 0 on $procdff$675 ($adff) from module top.
 
 2.30.14. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
@@ -996,11 +1025,11 @@ Finding identical cells in module `\top'.
 Removed a total of 0 cells.
 
 2.30.20. Executing OPT_DFF pass (perform DFF optimizations).
-Handling always-active async load on $auto$proc_dlatch.cc:427:proc_dlatch$624 ($dlatch) from module top (changing to combinatorial circuit).
+Handling always-active async load on $auto$proc_dlatch.cc:427:proc_dlatch$642 ($dlatch) from module top (changing to combinatorial circuit).
 
 2.30.21. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
-Removed 2 unused cells and 6 unused wires.
+Removed 1 unused cells and 5 unused wires.
 
 2.30.22. Executing OPT_EXPR pass (perform const folding).
 Optimizing module top.
@@ -1076,19 +1105,18 @@ Using extmapper simplemap for cells of type $not.
 Using template $paramod$a1bc51c02ce12ac21eb18988e83292af48ed7d72\_80_ice40_alu for cells of type $alu.
 Using template $paramod$175e67c02b86e96b1288b9dc100122520d7240d8\_90_alu for cells of type $alu.
 Using extmapper simplemap for cells of type $eq.
-Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $reduce_and.
 Using extmapper simplemap for cells of type $logic_and.
 Using extmapper simplemap for cells of type $adffe.
-Using extmapper simplemap for cells of type $reduce_and.
+Using template $paramod$d2fa05d38998afabc6d4f34471305d0af4b8b2df\_80_ice40_alu for cells of type $alu.
 Using template $paramod$ce0ec84be7047712840b0952f343ee9e63ef75d1\_80_ice40_alu for cells of type $alu.
 Using template $paramod$32a7b7b86c07519b7537abc18e96f0331f97914d\_80_ice40_alu for cells of type $alu.
-Using template $paramod$dbcdc7e8aa1a4080cea2deda6fdc8772064f4d90\_80_ice40_alu for cells of type $alu.
-Using template $paramod$fedb90247e1daaa8b0af86a595f377181f141d27\_90_pmux for cells of type $pmux.
-Using extmapper simplemap for cells of type $mux.
+Using template $paramod$32e7c4d6f92ff4337599ece53082d2e88a82a9f2\_90_pmux for cells of type $pmux.
 Using extmapper simplemap for cells of type $reduce_bool.
-Using extmapper simplemap for cells of type $lut.
+Using extmapper simplemap for cells of type $mux.
 Using extmapper simplemap for cells of type $reduce_or.
-Using template $paramod$d2fa05d38998afabc6d4f34471305d0af4b8b2df\_80_ice40_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $lut.
 Using extmapper simplemap for cells of type $logic_not.
 Using template $paramod$c5c783b17ab1d780abfad8cfe6563a0a7b47a3b0\_90_pmux for cells of type $pmux.
 Using extmapper simplemap for cells of type $dff.
@@ -1108,23 +1136,23 @@ Optimizing module top.
 
 2.33.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\top'.
-Removed a total of 83 cells.
+Removed a total of 95 cells.
 
 2.33.3. Executing OPT_DFF pass (perform DFF optimizations).
 
 2.33.4. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
-Removed 40 unused cells and 247 unused wires.
+Removed 40 unused cells and 260 unused wires.
 
 2.33.5. Finished fast OPT passes.
 
 2.34. Executing ICE40_OPT pass (performing simple optimizations).
 
 2.34.1. Running ICE40 specific optimizations.
-Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$720.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$720.BB [0]
-Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$741.slice[0].carry: CO=\i [0]
-Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$744.slice[0].carry: CO=\cnt [0]
-Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$747.slice[0].carry: CO=\c [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$742.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$742.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$763.slice[0].carry: CO=\i [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$766.slice[0].carry: CO=\cnt [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$769.slice[0].carry: CO=\c [0]
 
 2.34.2. Executing OPT_EXPR pass (perform const folding).
 Optimizing module top.
@@ -1186,9 +1214,9 @@ Generating RTLIL representation for module `\$_SDFFCE_PP1P_'.
 Successfully finished Verilog frontend.
 
 2.36.2. Continuing TECHMAP pass.
+Using template \$_DFFE_PP0P_ for cells of type $_DFFE_PP0P_.
 Using template \$_DFFE_PP_ for cells of type $_DFFE_PP_.
 Using template \$_DFF_P_ for cells of type $_DFF_P_.
-Using template \$_DFFE_PP0P_ for cells of type $_DFFE_PP0P_.
 Using template \$_DFF_NP0_ for cells of type $_DFF_NP0_.
 Using template \$_DFFE_NP_ for cells of type $_DFFE_NP_.
 Using template \$_SDFFCE_NP0P_ for cells of type $_SDFFCE_NP0P_.
@@ -1200,9 +1228,9 @@ No more expansions possible.
 Optimizing module top.
 
 2.38. Executing SIMPLEMAP pass (map simple cells to gate primitives).
-Mapping top.$auto$alumacc.cc:485:replace_alu$741.slice[0].carry ($lut).
-Mapping top.$auto$alumacc.cc:485:replace_alu$744.slice[0].carry ($lut).
-Mapping top.$auto$alumacc.cc:485:replace_alu$747.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$763.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$766.slice[0].carry ($lut).
+Mapping top.$auto$alumacc.cc:485:replace_alu$769.slice[0].carry ($lut).
 
 2.39. Executing ICE40_OPT pass (performing simple optimizations).
 
@@ -1219,7 +1247,7 @@ Removed a total of 3 cells.
 
 2.39.5. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
-Removed 0 unused cells and 346 unused wires.
+Removed 0 unused cells and 342 unused wires.
 
 2.39.6. Rerunning OPT passes. (Removed registers in this run.)
 
@@ -1253,7 +1281,7 @@ No more expansions possible.
 2.41. Executing ABC pass (technology mapping using ABC).
 
 2.41.1. Extracting gate netlist of module `\top' to `<abc-temp-dir>/input.blif'..
-Extracted 129 gates and 175 wires to a netlist network with 45 inputs and 55 outputs.
+Extracted 142 gates and 188 wires to a netlist network with 45 inputs and 53 outputs.
 
 2.41.1.1. Executing ABC.
 Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
@@ -1275,20 +1303,20 @@ ABC: + if
 ABC: + mfs2 
 ABC: + lutpack -S 1 
 ABC: + dress <abc-temp-dir>/input.blif 
-ABC: Total number of equiv classes                =      50.
-ABC: Participating nodes from both networks       =     125.
-ABC: Participating nodes from the first network   =      58. (  93.55 % of nodes)
-ABC: Participating nodes from the second network  =      67. ( 108.06 % of nodes)
-ABC: Node pairs (any polarity)                    =      58. (  93.55 % of names can be moved)
-ABC: Node pairs (same polarity)                   =      57. (  91.94 % of names can be moved)
-ABC: Total runtime =     0.01 sec
+ABC: Total number of equiv classes                =      53.
+ABC: Participating nodes from both networks       =     129.
+ABC: Participating nodes from the first network   =      60. (  89.55 % of nodes)
+ABC: Participating nodes from the second network  =      69. ( 102.99 % of nodes)
+ABC: Node pairs (any polarity)                    =      60. (  89.55 % of names can be moved)
+ABC: Node pairs (same polarity)                   =      57. (  85.07 % of names can be moved)
+ABC: Total runtime =     0.02 sec
 ABC: + write_blif <abc-temp-dir>/output.blif 
 
 2.41.1.2. Re-integrating ABC results.
-ABC RESULTS:              $lut cells:       61
-ABC RESULTS:        internal signals:       75
+ABC RESULTS:              $lut cells:       66
+ABC RESULTS:        internal signals:       90
 ABC RESULTS:           input signals:       45
-ABC RESULTS:          output signals:       55
+ABC RESULTS:          output signals:       53
 Removing temp directory.
 
 2.42. Executing ICE40_WRAPCARRY pass (wrap carries).
@@ -1321,33 +1349,33 @@ Successfully finished Verilog frontend.
 
 2.43.2. Continuing TECHMAP pass.
 No more expansions possible.
-Removed 29 unused cells and 165 unused wires.
+Removed 30 unused cells and 178 unused wires.
 
 2.44. Executing OPT_LUT pass (optimize LUTs).
 Discovering LUTs.
-Number of LUTs:       88
+Number of LUTs:       93
   1-LUT               31
-  2-LUT                7
-  3-LUT               33
-  4-LUT               17
+  2-LUT               14
+  3-LUT               38
+  4-LUT               10
   with \SB_CARRY    (#0)   26
   with \SB_CARRY    (#1)   26
 
 Eliminating LUTs.
-Number of LUTs:       88
+Number of LUTs:       93
   1-LUT               31
-  2-LUT                7
-  3-LUT               33
-  4-LUT               17
+  2-LUT               14
+  3-LUT               38
+  4-LUT               10
   with \SB_CARRY    (#0)   26
   with \SB_CARRY    (#1)   26
 
 Combining LUTs.
-Number of LUTs:       79
+Number of LUTs:       84
   1-LUT               22
-  2-LUT                7
-  3-LUT               33
-  4-LUT               17
+  2-LUT               14
+  3-LUT               38
+  4-LUT               10
   with \SB_CARRY    (#0)   26
   with \SB_CARRY    (#1)   26
 
@@ -1362,34 +1390,37 @@ Generating RTLIL representation for module `\$lut'.
 Successfully finished Verilog frontend.
 
 2.45.2. Continuing TECHMAP pass.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
 Using template $paramod$6e238df02989b317f10820a22773676e71120644\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00010000 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01000000 for cells of type $lut.
-Using template $paramod$fc318a7df7fe07fd6e06d67fcbc358e9823ea389\$lut for cells of type $lut.
-Using template $paramod$e49f6e3576ef1a6d2f58c54414dbb786af8cc869\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00001101 for cells of type $lut.
-Using template $paramod$272652f6c6fbe9a75eff76e45cc7e2788835518b\$lut for cells of type $lut.
-Using template $paramod$6d6beead1425af15cf78b27fd9b11b41b5d4bce8\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1011 for cells of type $lut.
-Using template $paramod$e9f85a707ad8076d7e1b6616c949f1643c599839\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01100000 for cells of type $lut.
-Using template $paramod$7ea938ba138d4861840be1d72fba17b321428629\$lut for cells of type $lut.
-Using template $paramod$314fe9458b07176c4d2c8c59533027c4c55155b5\$lut for cells of type $lut.
-Using template $paramod$1defcde2651b9293b25dc8313a52210a02d52398\$lut for cells of type $lut.
-Using template $paramod$ab8bb87959c5d7cfa27886cee1355b38e054a61a\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0001 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1000 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00000111 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1001 for cells of type $lut.
-Using template $paramod$456518d681b099e47e304359458496f2552b5118\$lut for cells of type $lut.
-Using template $paramod$fd904e9e35cfd343a9df248824bd3f1408724879\$lut for cells of type $lut.
+Using template $paramod$ef55f89c74d994c27b4ec4bac79af43e8b1d7e25\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
+Using template $paramod$6d6beead1425af15cf78b27fd9b11b41b5d4bce8\$lut for cells of type $lut.
+Using template $paramod$cd05f04889088c47a0a5abae8c2d644fd314805e\$lut for cells of type $lut.
+Using template $paramod$a3cdc1eb771a2c6a16f64da161e11100ac409d2b\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11111110 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1110 for cells of type $lut.
 Using template $paramod$ff10621ff350133ce54c2c9c3516ef034e8cfe58\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1001 for cells of type $lut.
+Using template $paramod$ab8bb87959c5d7cfa27886cee1355b38e054a61a\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1011 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00110101 for cells of type $lut.
+Using template $paramod$e9c77024ca501b890c641f9c0b10e27242db8730\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00001101 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00010000 for cells of type $lut.
+Using template $paramod$272652f6c6fbe9a75eff76e45cc7e2788835518b\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01110000 for cells of type $lut.
+Using template $paramod$ae9b8abdb4f811ce37985dd5106af9cd21223954\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11110100 for cells of type $lut.
+Using template $paramod$fd904e9e35cfd343a9df248824bd3f1408724879\$lut for cells of type $lut.
 Using template $paramod$2f4542ea1b222299c204d0a65b2561ddd6abf65d\$lut for cells of type $lut.
 No more expansions possible.
-Removed 0 unused cells and 161 unused wires.
+Removed 0 unused cells and 173 unused wires.
 
 2.46. Executing AUTONAME pass.
-Renamed 1892 objects in module top (26 iterations).
+Renamed 1909 objects in module top (24 iterations).
 
 2.47. Executing HIERARCHY pass (managing design hierarchy).
 
@@ -1404,24 +1435,24 @@ Removed 0 unused modules.
 
 === top ===
 
-   Number of wires:                 71
-   Number of wire bits:            270
-   Number of public wires:          71
-   Number of public wire bits:     270
+   Number of wires:                 74
+   Number of wire bits:            281
+   Number of public wires:          74
+   Number of public wire bits:     281
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                193
-     SB_CARRY                       49
+   Number of cells:                198
+     SB_CARRY                       50
      SB_DFF                         21
      SB_DFFE                         1
-     SB_DFFER                       10
+     SB_DFFER                        9
      SB_DFFNE                       16
      SB_DFFNESR                      4
      SB_DFFNR                        1
      SB_DFFNSR                       1
      SB_DFFSS                       11
-     SB_LUT4                        79
+     SB_LUT4                        84
 
 2.49. Executing CHECK pass (checking for obvious problems).
 Checking module top...
@@ -1429,6 +1460,6 @@ Found and reported 0 problems.
 
 2.50. Executing JSON backend.
 
-End of script. Logfile hash: d55515ec52, CPU: user 0.40s system 0.01s, MEM: 21.76 MB peak
+End of script. Logfile hash: 0997582c5f, CPU: user 0.88s system 0.03s, MEM: 21.76 MB peak
 Yosys 0.33+6 (git sha1 41b34a193, x86_64-conda-linux-gnu-cc 11.2.0 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/root/conda-eda/conda-eda/workdir/conda-env/conda-bld/yosys_1694128612374/work=/usr/local/src/conda/yosys-0.33_7_g41b34a193 -fdebug-prefix-map=/home/josedddd1234/miniconda3/envs/digital=/usr/local/src/conda-prefix -fPIC -Os -fno-merge-constants)
-Time spent: 48% 13x read_verilog (0 sec), 17% 1x abc (0 sec), ...
+Time spent: 46% 13x read_verilog (0 sec), 16% 1x abc (0 sec), ...
